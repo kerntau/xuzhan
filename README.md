@@ -95,7 +95,7 @@ CMS_WEB_HOST=0.0.0.0 CMS_API_HOST=127.0.0.1 \
 AUTO_OPEN_PORTS=ask bash install.sh
 ```
 
-如需继续使用 Gitee，默认值已经是 `https://gitee.com/kerntau/blog.git`；如需切换其他仓库，只需覆盖 `REPOSITORY_URL`。
+如需使用其他代码托管仓库，请通过环境变量 REPOSITORY_URL 配置，并先确认远程地址可访问。
 
 服务健康检查通过后，脚本还会检查自定义端口是否真实监听以及本机防火墙状态。`AUTO_OPEN_PORTS=ask`（默认）会在发现启用的 UFW/firewalld 未放行时询问，`AUTO_OPEN_PORTS=true` 或 `bash install.sh --yes` 会自动添加 TCP 放行规则；使用默认 `ask` 时，`--non-interactive` 只检测并提醒，`AUTO_OPEN_PORTS=false` 则始终只检测并提醒。脚本不会擅自启用新防火墙，也不会自动修改复杂的 nftables/iptables 规则；API 绑定 `127.0.0.1` 或 `::1` 时不会要求开放公网端口。云厂商安全组、宝塔面板外层防火墙无法由服务器脚本可靠确认，外网访问失败时仍需在对应控制台放行 TCP 端口。
 
