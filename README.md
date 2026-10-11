@@ -92,17 +92,7 @@ bash install.sh
 - 运行 pnpm build、pnpm typecheck、pnpm test:api 和 go -C backend vet ./... 验证构建与 API。
 - 密钥、管理员密码、Git 凭据和推送 Token 只放环境变量，不提交 .env。
 
-## 07. 工程契约 // ENGINEERING CONTRACT
 
-提交前请保持内容与代码分离，不把数据库文件、storage/ 或密钥加入版本库。涉及 API、导入和部署脚本的改动，应同时更新对应 docs，并在描述中说明回滚方式与数据影响。
-
-## 08. 路线图 // ROADMAP
-
-- [x] 单管理员 CMS、SQLite 内容存储和后台任务
-- [x] Markdown / MDX 导入、SEO 与 Git 更新流程
-- [x] 前台搜索和离线内容兼容路径
-- [ ] 接入前台评论提交和建议反馈界面
-- [ ] 持续完善备份恢复与部署可观测性
 
 ## 09. 许可证 // LICENSE
 
