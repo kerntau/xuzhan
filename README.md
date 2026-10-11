@@ -4,9 +4,9 @@
 
 **知行合一，缄默前行。**
 
-一个面向个人创作的单用户技术 CMS：使用 Next.js 提供前台站点和 Arco Design 管理后台，Go + SQLite 负责内容、鉴权、任务和维护能力。
+一个面向个人创作的单用户技术 CMS：使用 React + Rsbuild 提供前台站点和管理后台，Go + SQLite 负责内容、鉴权、任务和维护能力。
 
-[在线访问](https://blog.cot.wiki) · [问题反馈](https://github.com/kerntau/blog/issues)
+[代码仓库](https://github.com/kerntau/xuzhan)
 
 </div>
 
@@ -35,7 +35,7 @@
 
 | 层级          | 选型                             | 职责                                         |
 | ------------- | -------------------------------- | -------------------------------------------- |
-| 前台与后台 UI | Next.js 16、React 19、TypeScript | 内容展示、`/admin` 管理界面、缓存刷新入口    |
+| 前台与后台 UI | React 19、TypeScript、Rsbuild | 内容展示、`/admin` 管理界面、缓存刷新入口    |
 | 管理组件      | Arco Design                      | 后台布局、表单、表格、反馈与状态展示         |
 | 业务 API      | Go 标准库                        | 鉴权、内容管理、审计、系统任务和公开内容接口 |
 | 数据库        | SQLite（WAL）                    | CMS 的运行时数据唯一来源                     |
@@ -168,4 +168,4 @@ pnpm dev
 
 ## 许可
 
-本项目使用 [GPL-3.0](LICENSE) 许可协议。
+本项目使用 [AGPL-3.0](LICENSE) 许可协议。
